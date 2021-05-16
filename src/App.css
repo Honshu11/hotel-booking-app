@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.main-form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
