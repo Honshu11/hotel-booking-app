@@ -1,5 +1,5 @@
-import { Modal } from "bootstrap";
 import React from "react";
+import ConfirmationModal from "./ConfirmationModal";
 import "./App.css";
 
 // MAIN TAKEAWAYS FROM PROJECT:
@@ -75,18 +75,10 @@ function App() {
         className="btn btn-primary"
         data-toggle="modal"
         data-target="#modal-submit">Confirm</button>
+      <ConfirmationModal/>
+      
 
-        
-      <div className="modal fade" id="modal-submit">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h3 className="modal-title"></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   );
 }
 
