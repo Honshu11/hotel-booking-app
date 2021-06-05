@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-function ConfirmationModal() {
+// function ConfirmationModal() {
 //   return (
 //     <div className="modal" tabindex="-1" role="dialog">
 //       <div className="modal-dialog" role="document">
@@ -36,9 +36,24 @@ function ConfirmationModal() {
 //       </div>
 //     </div>
 //   );
-    return(
-        <button className="btn btn-primary">Submit</button>
-    )
+  
+// }
+
+
+function ConfirmationModal(){
+  return(
+    <div className="modal">
+      <div className="modal-content">
+        <div className="modal-header">
+          <div className="modal-body">
+            <h2>Testing</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
+
+
 
 export default ConfirmationModal;
