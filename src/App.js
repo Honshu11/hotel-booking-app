@@ -34,11 +34,17 @@ function App() {
   const [guests, setGuests] = useState(1);
   const [rooms, setRooms] = useState(1);
   const [nights, setNight] = useState(1);
-
-  console.log(firstName, lastName);
+  const bookingInformation = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    address: address,
+    guests: guests,
+    rooms: rooms,
+    nights: nights,
+  }
 
   function confirmBooking() {
-    console.log(firstName, lastName, address, email, guests, rooms, nights);
   }
 
   return (
@@ -49,7 +55,7 @@ function App() {
       </header>
       <form className="main-form">
         <div className="user-form-info">
-          <label for="fName">First Name:</label>
+          <label htmlFor="fName">First Name:</label>
           <input
             type="text"
             name="fName"
@@ -57,7 +63,7 @@ function App() {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-          <label for="lName">Last Name:</label>
+          <label htmlFor="lName">Last Name:</label>
           <input
             type="text"
             name="lName"
@@ -65,7 +71,7 @@ function App() {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-          <label for="email">Email:</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="text"
             name="email"
@@ -73,7 +79,7 @@ function App() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label for="address">Address:</label>
+          <label htmlFor="address">Address:</label>
           <input
             type="text"
             name="address"
@@ -83,7 +89,7 @@ function App() {
           />
         </div>
         <div className="user-room-info">
-          <label for="rooms-select">Rooms:</label>
+          <label htmlFor="rooms-select">Rooms:</label>
           <select
             id="rooms-select"
             value={rooms}
@@ -95,7 +101,7 @@ function App() {
             <option>4</option>
             <option>5</option>
           </select>
-          <label for="guests-select">Guests:</label>
+          <label htmlFor="guests-select">Guests:</label>
           <select
             id="guests-select"
             value={guests}
@@ -112,7 +118,7 @@ function App() {
             <option>9</option>
             <option>10</option>
           </select>
-          <label for="night-select">Nights:</label>
+          <label htmlFor="night-select">Nights:</label>
           <select
             id="night-select"
             value={nights}
@@ -139,7 +145,7 @@ function App() {
       >
         Confirm
       </button>
-      <ConfirmationModal />
+      <ConfirmationModal bookingInformation={bookingInformation}/>
     </div>
   );
 }
