@@ -5,27 +5,6 @@ import "./App.css";
 // MAIN TAKEAWAYS FROM PROJECT:
 // For this project you'll be creating a simple hotel booking application. A user who wants to book at the hotel will fill out some basic form fields and will be shown a confirmation message.
 
-
-
-
-// TODO: pass info through as props to the confirmation modal.
-// TODO: try to display info
-// TODO: have modal prop to confirm or deny infomation
-// TODO: Pressing the "confirm" button, a modal should pop up the screen confirming the user's selection.
-// TODO: Lastly, style the page to best of your ability.
-
- 
-
-// The application should have three components:
-//  App.js
-//    -contains state.
-//  BookingForm.js
-//    -No state.
-//  ConfirmationModal.js
-//    -No state.
-
-
-
 function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -42,10 +21,7 @@ function App() {
     guests: guests,
     rooms: rooms,
     nights: nights,
-  }
-
-  function confirmBooking() {
-  }
+  };
 
   return (
     <div className="main-container">
@@ -137,19 +113,9 @@ function App() {
           </select>
         </div>
       </form>
-      <button
-        className="btn btn-primary"
-        data-toggle="modal"
-        data-target="#modal-submit"
-        onClick={confirmBooking}
-      >
-        Confirm
-      </button>
-      <ConfirmationModal bookingInformation={bookingInformation}/>
+      <ConfirmationModal bookingInformation={bookingInformation} />
     </div>
   );
 }
 
 export default App;
-
-
